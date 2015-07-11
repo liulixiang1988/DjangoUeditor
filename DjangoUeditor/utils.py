@@ -1,15 +1,16 @@
-#coding: utf-8
+# -*- coding: utf-8 -*-
 
 #文件大小类
 class FileSize():
-    SIZE_UNIT={"Byte":1,"KB":1024,"MB":1048576,"GB":1073741824,"TB":1099511627776L}
+    SIZE_UNIT={"Byte":1,"KB":1024,"MB":1048576,"GB":1073741824,"TB":1099511627776}
     def __init__(self,size):
-        self.size=long(FileSize.Format(size))
+        newsize=FileSize.Format(size)
+        self._size = newsize
 
     @staticmethod
     def Format(size):
         import re
-        if isinstance(size,int) or isinstance(size,long):
+        if isinstance(size,int):
             return size
         else:
             if not isinstance(size,str):
@@ -21,7 +22,7 @@ class FileSize():
                 if match:
                     m_size, m_unit=match.groups()
                     if m_size.find(".")==-1:
-                        m_size=long(m_size)
+                        m_size=int(m_size)
                     else:
                         m_size=float(m_size)
                     if m_unit!="BYTE":
@@ -34,13 +35,14 @@ class FileSize():
     #返回字节为单位的值
     @property
     def size(self):
-        return self.size
+        return self._size
+
     @size.setter
     def size(self,newsize):
         try:
-            self.size=long(newsize)
+            self._size=newsize
         except:
-            self.size=0
+            self._size=0
 
     #返回带单位的自动值
     @property
