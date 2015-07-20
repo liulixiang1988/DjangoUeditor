@@ -1,12 +1,13 @@
-# coding:utf-8
+# -*- coding:utf-8 -*-
+
 from django import forms
 from django.conf import settings
 from django.contrib.admin.widgets import AdminTextareaWidget
 from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
 from django.utils.http import urlencode
-import settings as USettings
-from  commands import *
+from . import settings as USettings
+from  .commands import *
 
 # 修正输入的文件路径,输入路径的标准格式：abc,不需要前后置的路径符号
 #如果输入的路径参数是一个函数则执行，否则可以拉接受时间格式化，用来生成如file20121208.bmp的重命名格式
@@ -110,7 +111,7 @@ class UEditorWidget(forms.Textarea):
         #传入模板的参数
         editor_id="id_%s" % name.replace("-", "_")
         uSettings={
-            "name": name.replace("-", "_"),
+            "name": name,
             "id": editor_id,
             "value":value
         }
