@@ -23,7 +23,7 @@ UEditorUploadSettings={
     "imageFieldName": "upfile", #* 提交的图片表单名称 */
     "imageUrlPrefix":"",
     "imagePathFormat":"",
-    "imageAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"], #上传图片格式显示
+    "imageAllowFiles": [".png", ".jpg", ".JPG", ".jpeg", ".JPEG", ".gif", ".bmp"], #上传图片格式显示
 
     #涂鸦图片上传配置项 */
     "scrawlActionName": "uploadscrawl", #执行上传涂鸦的action名称 */
@@ -43,7 +43,7 @@ UEditorUploadSettings={
     "catcherActionName": "catchimage", #执行抓取远程图片的action名称 */
     "catcherFieldName": "source", #提交的图片列表表单名称 */
     "catcherMaxSize": 10485760, #上传大小限制，单位B */
-    "catcherAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"], #抓取图片格式显示 */
+    "catcherAllowFiles": [".png", ".jpg", ".JPG", ".jpeg", ".JPEG", ".gif", ".bmp"], #抓取图片格式显示 */
     "catcherUrlPrefix":"",
     #上传视频配置 */
     "videoActionName": "uploadvideo", #执行上传视频的action名称 */
@@ -62,11 +62,11 @@ UEditorUploadSettings={
     "fileMaxSize": 204800000, #上传大小限制，单位B，200MB */
     "fileUrlPrefix": "",#文件访问路径前缀 */
     "fileAllowFiles": [
-        ".png", ".jpg", ".jpeg", ".gif", ".bmp",
+        ".png", ".jpg", ".JPG", ".jpeg", ".JPEG", ".gif", ".bmp",
         ".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg",
         ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid",
         ".rar", ".zip", ".tar", ".gz", ".7z", ".bz2", ".cab", ".iso",
-        ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".pdf", ".txt", ".md", ".xml"
+        ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".pdf", ".PDF", ".txt", ".md", ".xml", ".dwg"
     ], #上传文件格式显示 */
 
     #列出指定目录下的图片 */
@@ -82,12 +82,12 @@ UEditorUploadSettings={
     "fileManagerUrlPrefix": "",
     "fileManagerListSize": 30, #每次列出文件数量 */
     "fileManagerAllowFiles": [
-        ".png", ".jpg", ".jpeg", ".gif", ".bmp",".tif",".psd"
+        ".png", ".jpg", ".JPG", ".jpeg", ".JPEG", ".gif", ".bmp",".tif",".psd"
         ".flv", ".swf", ".mkv", ".avi", ".rm", ".rmvb", ".mpeg", ".mpg",
         ".ogg", ".ogv", ".mov", ".wmv", ".mp4", ".webm", ".mp3", ".wav", ".mid",
         ".rar", ".zip", ".tar", ".gz", ".7z", ".bz2", ".cab", ".iso",
-        ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".pdf", ".txt", ".md", ".xml",
-        ".exe",".com",".dll",".msi"
+        ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".pdf", ".PDF", ".txt", ".md", ".xml",
+        ".exe",".com",".dll",".msi", ".dwg"
     ] #列出的文件类型 */
 }
 
